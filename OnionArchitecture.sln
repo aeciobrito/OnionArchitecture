@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture", "OnionArchitecture\OnionArchitecture.csproj", "{3FBBE091-E3C9-4BB8-9BB3-6C999C022AB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture", "OnionArchitecture\OnionArchitecture.csproj", "{3FBBE091-E3C9-4BB8-9BB3-6C999C022AB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8A3805A5-5C7B-49D7-88AE-8E51EDABDD53} = {8A3805A5-5C7B-49D7-88AE-8E51EDABDD53}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{289B80DC-8C62-49F8-9741-49062DAF8866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Repository", "Repository\Repository.csproj", "{289B80DC-8C62-49F8-9741-49062DAF8866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{8A3805A5-5C7B-49D7-88AE-8E51EDABDD53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{8A3805A5-5C7B-49D7-88AE-8E51EDABDD53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{CB7E74F5-1C1C-483C-88FB-15FB1CCFAC3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{CB7E74F5-1C1C-483C-88FB-15FB1CCFAC3F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8A3805A5-5C7B-49D7-88AE-8E51EDABDD53} = {8A3805A5-5C7B-49D7-88AE-8E51EDABDD53}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

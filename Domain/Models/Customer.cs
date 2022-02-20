@@ -1,13 +1,8 @@
 ﻿using Domain.Models.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain.Models
 {
-    internal class Customer : Entity
+    public class Customer : IEntity
     {
         public Customer(string customerName, string purchasesProduct, string paymentType)
         {
@@ -25,6 +20,11 @@ namespace Domain.Models
         public bool IsActive { get; set; }
        
         public bool Validate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Deactivate()
         {
             throw new NotImplementedException();
         }

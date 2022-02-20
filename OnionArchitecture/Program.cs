@@ -1,3 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Repository;
+using Repository.Interfaces;
+using Services;
+using Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -5,6 +11,12 @@ builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository.Repository<>));
+builder.Services.AddTransient<ICustomerService, CustomerService>();
 
 var app = builder.Build();
 
